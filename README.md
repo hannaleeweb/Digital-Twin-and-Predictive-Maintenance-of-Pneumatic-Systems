@@ -1,7 +1,7 @@
 Project 215: Fill out this form to register your intent to complete this project and learn about the reward
-
+<img src=”(https://gist.githubusercontent.com/robertogl/e0115dc303472a9cfd52bbbc8edb7665/raw/pneumaticSys.jpg)”>
 	
-<img src=”(https://gist.githubusercontent.com/robertogl/e0115dc303472a9cfd52bbbc8edb7665/raw/pneumaticSys.jpg)”> Digital Twin and Predictive Maintenance of Pneumatic Systems
+Digital Twin and Predictive Maintenance of Pneumatic Systems
 Predict faults in pneumatic systems using simulation and AI/machine learning.
 
 Motivation
