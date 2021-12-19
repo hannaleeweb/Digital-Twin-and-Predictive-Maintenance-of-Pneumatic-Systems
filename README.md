@@ -1,8 +1,8 @@
 **Project 215:** Fill out this form to register your intent to complete this project and learn about the reward
 
 ## Digital Twin and Predictive Maintenance of Pneumatic Systems
-Predict faults in pneumatic systems using simulation and AI/machine learning.
 ![pneumaticSys](https://user-images.githubusercontent.com/20740422/146677392-93de1f0a-d8f1-40d3-b688-08ec36d9182f.jpg)
+Predict faults in pneumatic systems using simulation and AI/machine learning.
 
 ## Motivation
 Pneumatic systems make use of compressed gas or pressurized air to create motion. They are widely used for different applications including processes like drilling, packing, assembly systems, and also in air brakes for heavy vehicles. A typical pneumatic system consists of several mechanical, thermal, and electrical components like compressor, filter, regulator, lubricator, pipes, directional control valves, PLCs, plunger, actuators, and heat exchanger.
