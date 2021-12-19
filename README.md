@@ -1,8 +1,7 @@
-**Project 215:** Fill out this form to register your intent to complete this project and learn about the reward
-
 ## Digital Twin and Predictive Maintenance of Pneumatic Systems
+Predict faults in pneumatic systems using simulation and AI/machine learning.<br>
+
 ![pneumaticSys](https://user-images.githubusercontent.com/20740422/146677392-93de1f0a-d8f1-40d3-b688-08ec36d9182f.jpg)
-Predict faults in pneumatic systems using simulation and AI/machine learning.
 
 ## Motivation
 Pneumatic systems make use of compressed gas or pressurized air to create motion. They are widely used for different applications including processes like drilling, packing, assembly systems, and also in air brakes for heavy vehicles. A typical pneumatic system consists of several mechanical, thermal, and electrical components like compressor, filter, regulator, lubricator, pipes, directional control valves, PLCs, plunger, actuators, and heat exchanger.
@@ -28,24 +27,23 @@ Find or measure real data to apply the predictive models and evaluate the result
 Prototype Operations Optimization in real time, by deploying the Predictive Maintenance algorithm and Simscape model on cyber-physical embedded devices and cloud services, using Industrial IoT workflow concepts. Use the following pointers for inspiration: a. Generation of raw sensor signals: Use a real machine or, run the Simscape Model in real time on Speedgoat computer or Raspberry Pi to generate sensor data and send it to Raspberry Pi ‘Edge device’ b. Feature Extraction on Edge device: Perform feature extraction from sensor data on the Raspberry Pi ‘Edge device’ and stream the feature data to Thingspeak Cloud based service c. Predictive Models running on cloud: Run your predictive models on Thingspeak to make predictions in real- time about anomalous behavior, fault-type and remaining useful life.
 
 ## Background Material
-What is Predictive Maintenance?
-Predictive Maintenance Toolbox
-Predictive Maintenance Video Series
-Simscape
-Digital Twin
-Digital Twin for Industrial IoT
-Simulink Design Optimization
-Deploying Predictive Maintenance Algorithms to the Cloud and Edge
-Predictive Maintenance of a Duct Fan Using ThingSpeak and MATLAB
-Parallel Computing Toolbox
+<ul><li><a href="https://www.mathworks.com/discovery/predictive-maintenance-matlab.html" rel="nofollow">What is Predictive Maintenance?</a></li>
+<li><a href="https://www.mathworks.com/products/predictive-maintenance.html" rel="nofollow">Predictive Maintenance Toolbox</a></li>
+<li><a href="https://www.mathworks.com/videos/series/predictive-maintenance-tech-talk-series.html" rel="nofollow">Predictive Maintenance Video Series</a></li>
+<li><a href="https://www.mathworks.com/products/simscape.html" rel="nofollow">Simscape</a></li>
+<li><a href="https://www.mathworks.com/discovery/digital-twin.html" rel="nofollow">Digital Twin</a></li>
+<li><a href="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/events/matlabexpo/online/2020/matlab-expo-2020-digital-twins-iiot.pdf" rel="nofollow">Digital Twin for Industrial IoT</a></li>
+<li><a href="https://www.mathworks.com/products/sl-design-optimization.html" rel="nofollow">Simulink Design Optimization</a></li>
+<li><a href="https://www.mathworks.com/company/newsletters/articles/deploying-predictive-maintenance-algorithms-to-the-cloud-and-edge.html" rel="nofollow">Deploying Predictive Maintenance Algorithms to the Cloud and Edge</a></li>
+<li><a href="https://www.mathworks.com/videos/predictive-maintenance-of-a-duct-fan-using-thingspeak-and-matlab-1542018024279.html" rel="nofollow">Predictive Maintenance of a Duct Fan Using ThingSpeak and MATLAB</a></li>
+<li><a href="https://www.mathworks.com/products/parallel-computing.html" rel="nofollow">Parallel Computing Toolbox</a></li></ul>
+  
 Suggested readings:
 
-Wolfgang Gauchel*, Thilo Streichert, Yannick Wilhelm. 2020. Predictive Maintenance with a Minimum of Sensors using Pneumatic Clamps As An Example. 12th International Fluid Power Conference, Dresden
-P. Aivaliotis, K. Georgoulias & G. Chryssolouris (2019) The use of Digital Twin for predictive maintenance in manufacturing, International Journal of Computer Integrated Manufacturing, 32:11, 1067-1080, DOI: 10.1080/0951192X.2019.1686173
-Aivaliotis, P., K. Georgoulias, Z. Arkouli, and S. Makris. 2019. “Methodology for Enabling Digital Twin Using Advanced Physics-based Modelling in Predictive Maintenance.” Procedia CIRP 81: 417–422. doi:10.1016/j.procir.2019.03.072.
-Axel Eriksson (2010). Detecting Leakages in the Pneumatic System of Heavy Vehicles Modelling Using Simulink
-Impact
-Improve efficiency and reliability of industrial processes
+<li>Wolfgang Gauchel*, Thilo Streichert, Yannick Wilhelm. 2020. Predictive Maintenance with a Minimum of Sensors using Pneumatic Clamps As An Example. 12th International Fluid Power Conference, Dresden</li>
+<li>P. Aivaliotis, K. Georgoulias & G. Chryssolouris (2019) The use of Digital Twin for predictive maintenance in manufacturing, International Journal of Computer Integrated Manufacturing, 32:11, 1067-1080, DOI: 10.1080/0951192X.2019.1686173</li>
+<li>Aivaliotis, P., K. Georgoulias, Z. Arkouli, and S. Makris. 2019. “Methodology for Enabling Digital Twin Using Advanced Physics-based Modelling in Predictive Maintenance.” Procedia CIRP 81: 417–422. doi:10.1016/j.procir.2019.03.072.</li>
+<li>Axel Eriksson (2010). Detecting Leakages in the Pneumatic System of Heavy Vehicles Modelling Using Simulink</li>
 
 ## Expertise Gained
 Artificial Intelligence, Industry 4.0, Cyber-Physical Systems, Digital Twins, Embedded AI, Health Monitoring, IoT, Machine Learning, Modeling and Simulation
