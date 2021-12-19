@@ -1,5 +1,6 @@
 ## Simulation-Based Design of Humanoid Robots
 Develop and use models of humanoid robots to increase understanding of how best to control them and direct them to do useful tasks.
+
 ![humanoidRobot](https://user-images.githubusercontent.com/20740422/146678763-5ea70a0f-e269-4f28-ae8e-3e4144469e29.png)
 
 
