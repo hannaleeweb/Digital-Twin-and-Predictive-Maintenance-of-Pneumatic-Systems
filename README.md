@@ -1,61 +1,68 @@
-## Digital Twin and Predictive Maintenance of Pneumatic Systems
-Predict faults in pneumatic systems using simulation and AI/machine learning.<br>
+## Simulation-Based Design of Humanoid Robots
+Develop and use models of humanoid robots to increase understanding of how best to control them and direct them to do useful tasks.
+![humanoidRobot](https://user-images.githubusercontent.com/20740422/146678763-5ea70a0f-e269-4f28-ae8e-3e4144469e29.png)
 
-![pneumaticSys](https://user-images.githubusercontent.com/20740422/146677392-93de1f0a-d8f1-40d3-b688-08ec36d9182f.jpg)
 
 ## Motivation
-Pneumatic systems make use of compressed gas or pressurized air to create motion. They are widely used for different applications including processes like drilling, packing, assembly systems, and also in air brakes for heavy vehicles. A typical pneumatic system consists of several mechanical, thermal, and electrical components like compressor, filter, regulator, lubricator, pipes, directional control valves, PLCs, plunger, actuators, and heat exchanger.
-This complex system can develop several kinds of faults over time, which are difficult to predict and diagnose. These include problems like air leakage, air choke, damaged filter, faulty valves, etc. All this can lead to production downtime and other business losses. Predictive Maintenance techniques using machine learning, provide promising possibilities to make data-driven decisions and take required maintenance, inventory planning, and repair actions in advance. However, training robust predictive maintenance algorithms requires a lot of sensor data that can effectively represent different scenarios of the system operation. Acquiring this data can be challenging and expensive in a real setting, especially data from faulty or degraded operations. One promising solution to this problem is to generate synthetic training data from a system simulation, which can represent a variety of operating conditions and fault states. The simulation can even be tuned to a real system in operation as a Digital Twin, allowing for machine-specific predictions and various what-if scenarios.
+Robots that can be repurposed are predicted to revolutionize many things, ranging from the construction industry to healthcare. Although great progress has been made both in actuation and sensing hardware, understanding how to control these types of robot is still in its infancy. Fast-simulating models provide a way to explore solutions to this, whether it be related to lower-level motion control or to higher-level task programming using AI.
 
 ## Project Description
-Work with Simscape™ to develop a simulation model of a pneumatic system by parameterizing it for normal and faulty behaviors. Generate synthetic sensor data by running simulations under different conditions. The synthetic data should then be used to train predictive models using Predictive Maintenance Toolbox™ and Statistics and Machine Learning Toolbox™ for finding anomalous behavior, classifying fault type, and estimating remaining useful life. Finally, test the accuracy of predictive maintenance models on real data or unseen synthetic data. Suggested Steps:
+This project could take on many different forms depending on your interests. A good starting point is the humanoid robot example already modeled in Simscape Multibody™ that is linked from the background material section below. Review this model and also the associated MATLAB® live scripts that design algorithms that make the robot walk. Having done this, it is then suggested that you pick at least one modeling task and one research task as the basis of your project. Some ideas for modeling and research tasks are listed below.
 
-Do a literature survey of pneumatic systems being used for different applications, including the study of commonly occurring faults, component degradation, environmental conditions, and installed sensors that can help identify potential faults and anomalies.
-Develop a Multiphysics model of a commonly used pneumatic system in any application setting, using Simscape™ including different mechanical, thermal, and electrical components. The model should be detailed enough to be able to incorporate commonly occurring faulty behaviors under different environmental conditions.
-Generate synthetic sensor data from the model representing different system behaviors showing the normal operation, continuous degradation, and faulty operation, based on the literature survey. Parallelize the simulations using Parallel Computing Toolbox™.
-Develop predictive models using Statistics and Machine Learning Toolbox™ and Predictive Maintenance Toolbox™, from the synthetic data to: a. Find anomalous behavior by applying different unsupervised machine learning techniques and compare the results.
-b. Classify faults with supervised machine learning techniques c. Estimate remaining useful life before failure occurs.
-Reflect upon the effectiveness and limitations of the proposed methodology. Also, comment on the utility of Simulation Methods and Digital Twins in Predictive Maintenance Applications.
+**Modeling tasks:**
 
-## Project variations:
+<li>Add more degrees of freedom e.g. in the hip and in the foot. Currently the robot relies on having a wide flat foot and flat ground surface. Adding another degree of freedom at the foot will help with balance when coupled with suitable control.</li>
+<li>Add actuation and sensor models. The model currently assumes ideal actuators that deliver demanded forces and torques. Replacing these with models of real actuators will bring some more real-world realism into the model. You will find examples of electrical, hydraulic, and pneumatic actuation in Simscape™ product examples to help you get started.</li>
+<li>Automate definition of the robot from MATLAB to support easy sizing of the robot.</li>  
 
-Create a Digital Twin by tuning the simulation model parameters based on real data using Simulink Design Optimization™. The simulated asset will now act as Digital Twin of the real system in operation, allowing for machine-specific predictions and various what-if scenarios.
+**Research tasks**
 
-## Advanced project work:
+<li>Develop algorithms to manage balance as measured by, for example, the minimum force required to make it fall over. You might want to tackle this task before trying any of the motion tasks to gain understanding and/or to provide an inner-loop balance feedback system.</li>
+<li>Develop algorithms to perform specific tasks such as walking, stopping, crouching, jumping, reaching/leaning. Consider using conventional approaches and/or AI methods such as reinforcement learning.</li>
+<li>Develop motion planning and control algorithms to perform more complex tasks. For example, can you get the robot to hit an incoming cricket ball or baseball? In the context of healthcare, can you develop solutions to one robot helping stabilize a second one that has more limited actuator capability? For construction, can you get two robots to coordinate lifting an I-beam from its two ends? Again, consider using conventional approaches and/or AI methods such as reinforcement learning and deep learning.</li>
+<li>Research controller architectures. Humans and animals have a structure of multiple nested feedback loops; would this help with a robot’s balance too? What is the role for pattern generators and feedforward in robotics versus other approaches?</li>
+<li>Does including natural mechanical compliance into the actuation system help or hinder control? Under what circumstances? This may be particularly pertinent to maintaining balance. How does compliance help with efficiency of locomotion?</li>
 
-Find or measure real data to apply the predictive models and evaluate the results. You may refer to the dataset on Air pressure system failures in Scania trucks.
-Prototype Operations Optimization in real time, by deploying the Predictive Maintenance algorithm and Simscape model on cyber-physical embedded devices and cloud services, using Industrial IoT workflow concepts. Use the following pointers for inspiration: a. Generation of raw sensor signals: Use a real machine or, run the Simscape Model in real time on Speedgoat computer or Raspberry Pi to generate sensor data and send it to Raspberry Pi ‘Edge device’ b. Feature Extraction on Edge device: Perform feature extraction from sensor data on the Raspberry Pi ‘Edge device’ and stream the feature data to Thingspeak Cloud based service c. Predictive Models running on cloud: Run your predictive models on Thingspeak to make predictions in real- time about anomalous behavior, fault-type and remaining useful life.
+## Background Material 
+<p dir="auto">It is suggested that you start with this <a href="https://www.mathworks.com/help/physmod/sm/ug/humanoid_walker.html" rel="nofollow">humanoid robot example</a>.
+The example includes two approaches to getting the robot to walk.</p>
+<p dir="auto">For electrical actuation modeling, take a look at:</p>
+<ul dir="auto">
+<li><a href="https://www.mathworks.com/help/physmod/sps/ref/motordrivesystemlevel.html" rel="nofollow">Motor &amp; Drive modeling</a></li>
+<li><a href="https://www.mathworks.com/help/physmod/sps/ref/rcservo.html" rel="nofollow">RC Servo modeling</a></li>
+<li><a href="https://www.mathworks.com/help/physmod/sps/ref/dcmotor.html" rel="nofollow">DC Motor</a></li>
+</ul>
 
-## Background Material
-<ul><li><a href="https://www.mathworks.com/discovery/predictive-maintenance-matlab.html" rel="nofollow">What is Predictive Maintenance?</a></li>
-<li><a href="https://www.mathworks.com/products/predictive-maintenance.html" rel="nofollow">Predictive Maintenance Toolbox</a></li>
-<li><a href="https://www.mathworks.com/videos/series/predictive-maintenance-tech-talk-series.html" rel="nofollow">Predictive Maintenance Video Series</a></li>
-<li><a href="https://www.mathworks.com/products/simscape.html" rel="nofollow">Simscape</a></li>
-<li><a href="https://www.mathworks.com/discovery/digital-twin.html" rel="nofollow">Digital Twin</a></li>
-<li><a href="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/events/matlabexpo/online/2020/matlab-expo-2020-digital-twins-iiot.pdf" rel="nofollow">Digital Twin for Industrial IoT</a></li>
-<li><a href="https://www.mathworks.com/products/sl-design-optimization.html" rel="nofollow">Simulink Design Optimization</a></li>
-<li><a href="https://www.mathworks.com/company/newsletters/articles/deploying-predictive-maintenance-algorithms-to-the-cloud-and-edge.html" rel="nofollow">Deploying Predictive Maintenance Algorithms to the Cloud and Edge</a></li>
-<li><a href="https://www.mathworks.com/videos/predictive-maintenance-of-a-duct-fan-using-thingspeak-and-matlab-1542018024279.html" rel="nofollow">Predictive Maintenance of a Duct Fan Using ThingSpeak and MATLAB</a></li>
-<li><a href="https://www.mathworks.com/products/parallel-computing.html" rel="nofollow">Parallel Computing Toolbox</a></li></ul>
-  
-Suggested readings:
+<p dir="auto">For hydraulic and pneumatic actuation, take a look at:</p>
 
-<li>Wolfgang Gauchel*, Thilo Streichert, Yannick Wilhelm. 2020. Predictive Maintenance with a Minimum of Sensors using Pneumatic Clamps As An Example. 12th International Fluid Power Conference, Dresden</li>
-<li>P. Aivaliotis, K. Georgoulias & G. Chryssolouris (2019) The use of Digital Twin for predictive maintenance in manufacturing, International Journal of Computer Integrated Manufacturing, 32:11, 1067-1080, DOI: 10.1080/0951192X.2019.1686173</li>
-<li>Aivaliotis, P., K. Georgoulias, Z. Arkouli, and S. Makris. 2019. “Methodology for Enabling Digital Twin Using Advanced Physics-based Modelling in Predictive Maintenance.” Procedia CIRP 81: 417–422. doi:10.1016/j.procir.2019.03.072.</li>
-<li>Axel Eriksson (2010). Detecting Leakages in the Pneumatic System of Heavy Vehicles Modelling Using Simulink</li>
+For electrical actuation modeling, take a look at:
+<ul dir="auto">
+<li><a href="https://www.mathworks.com/help/physmod/hydro/ug/antagonistic-mcKibben-muscle-actuator.html" rel="nofollow">Air muscles (McKibben actuation)</a></li>
+<li><a href="https://www.mathworks.com/help/physmod/hydro/ug/creating-a-simple-model.html" rel="nofollow">Hydraulic actuation</a></li>
+</ul>
+<p dir="auto">For control and AI (including reinforcement learning) see:</p>
+<ul dir="auto">
+<li><a href="https://www.mathworks.com/products/control.html" rel="nofollow">Control Systems Toolbox</a></li>
+<li><a href="https://www.mathworks.com/products/reinforcement-learning.html" rel="nofollow">Reinforcement Learning Toolbox</a></li>
+<li><a href="https://www.mathworks.com/products/deep-learning.html" rel="nofollow">Deep Learning Toolbox</a></li>
+<li><a href="https://www.mathworks.com/products/optimization.html" rel="nofollow">Optimization Toolbox</a></li>
+<li><a href="https://www.mathworks.com/products/global-optimization.html" rel="nofollow">Global Optimization Toolbox</a></li>
+</ul>
+
+## Impact
+Accelerate the deployment of humanoid robots to real-world tasks including in healthcare, construction, and manufacturing
 
 ## Expertise Gained
-Artificial Intelligence, Industry 4.0, Cyber-Physical Systems, Digital Twins, Embedded AI, Health Monitoring, IoT, Machine Learning, Modeling and Simulation
+Artificial Intelligence, Robotics, Control, Cyber-Physical Systems, Deep Learning, Humanoid, Human-Robot Interaction, Machine Learning, Mobile Robots, Modeling and Simulation, Optimization, Reinforcement Learning
 
 ## Project Difficulty
-Master's
+Bachelor, Master's, Doctoral
 
 ## Project Discussion
-Dedicated discussion forum to ask/answer questions, comment, or share your ideas for solutions for this project.
+<p dir="auto"><a href="https://github.com/mathworks/MathWorks-Excellence-in-Innovation/discussions/19">Dedicated discussion forum</a> to ask/answer questions, comment, or share your ideas for solutions for this project.</p>
 
 ## Proposed By
-rohit4849
+rhyde005
 
 ## Project Number
-215
+170
